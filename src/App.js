@@ -20,9 +20,7 @@ function App() {
     };
 
     fetchTasks(
-      {
-        url: "https://practice-react-firebase-24e0c-default-rtdb.firebaseio.com/tasks.json"
-      },
+      { url: 'https://practice-react-firebase-24e0c-default-rtdb.firebaseio.com/tasks.json' },
       transformTasks
     );
   }, [fetchTasks]);
@@ -30,6 +28,7 @@ function App() {
   const taskAddHandler = (task) => {
     setTasks((prevTasks) => prevTasks.concat(task));
   };
+  console.log(tasks)
 
   return (
     <React.Fragment>
